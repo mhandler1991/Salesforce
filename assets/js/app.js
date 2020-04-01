@@ -10,4 +10,8 @@ function tabUpdate(id){
     console.log('Removed Class...');
     document.getElementById(id).classList.add('slds-is-active');
     console.log('Updated Class...');
+    var idContent = id+'content';
+    console.log('id content:');
+    console.log(idContent); 
+    document.getElementById(idContent).classList.add('slds-show');
 }

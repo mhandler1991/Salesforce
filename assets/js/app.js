@@ -4,6 +4,8 @@
 
 // Tab Main Section - Tab Handeling 
 function tabUpdate(id){
+
+    // Log the function as run & Id of Tab
     console.log("Tab Clicked!");
     console.log(id);
 
@@ -74,6 +76,11 @@ function tabUpdate(id){
             console.log('Boy, we handeled those tabs...');
 
             break;
+
         default:
+            
+            // Log Unknown Tab Action
+            console.log('Oh No!.. Something went wrong with all this Tabbing - Opps');
+            break;
     }
 }

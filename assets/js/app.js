@@ -20,7 +20,8 @@ function tabUpdate(id){
             document.getElementById('tab3content').classList.add('slds-hide');
             break;
         case 'tab2':
-            console.log('Switch Result: Tab2..');
+            console.log('Switch Result: Tab2');
+            // Tab Handeling...
             // Remove Classes - Tabs
             document.getElementById('tab1').classList.remove('slds-is-active');
             document.getElementById('tab3').classList.remove('slds-is-active');
@@ -34,7 +35,7 @@ function tabUpdate(id){
             document.getElementById('tab2content').classList.add('slds-show');
             document.getElementById('tab1content').classList.add('slds-hide');
             document.getElementById('tab3content').classList.add('slds-hide');
-
+            // End Tab Handeling...
             break;
         case 'tab3':
             console.log('Switch Result: Tab3');

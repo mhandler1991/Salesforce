@@ -6,12 +6,35 @@
 function tabUpdate(id){
     console.log("Tab Clicked!");
     console.log(id);
-    document.getElementById('tab1').classList.remove('slds-is-active');
-    console.log('Removed Class...');
-    document.getElementById(id).classList.add('slds-is-active');
-    console.log('Updated Class...');
-    var idContent = id+'content';
-    console.log('id content:');
-    console.log(idContent); 
-    document.getElementById(idContent).classList.add('slds-show');
+
+    switch(id) {
+        case 'tab1':
+            console.log('Switch Result: Tab1');
+            document.getElementById('tab1').classList.add('slds-is-active');
+            document.getElementById('tab2').classList.remove('slds-is-active');
+            document.getElementById('tab3').classList.remove('slds-is-active');
+            document.getElementById('tab1-content').classList.add('slds-show');
+            document.getElementById('tab2-content').classList.remove('slds-show');
+            document.getElementById('tab3-content').classList.remove('slds-show');
+            break;
+        case 'tab2':
+            console.log('Switch Result: Tab2');
+            document.getElementById('tab2').classList.add('slds-is-active');
+            document.getElementById('tab1').classList.remove('slds-is-active');
+            document.getElementById('tab3').classList.remove('slds-is-active');
+            document.getElementById('tab2-content').classList.add('slds-show');
+            document.getElementById('tab1-content').classList.remove('slds-show');
+            document.getElementById('tab3-content').classList.remove('slds-show');
+            break;
+        case 'tab3':
+            console.log('Switch Result: Tab3');
+            document.getElementById('tab3').classList.add('slds-is-active');
+            document.getElementById('tab1').classList.remove('slds-is-active');
+            document.getElementById('tab2').classList.remove('slds-is-active');
+            document.getElementById('tab3-content').classList.add('slds-show');
+            document.getElementById('tab1-content').classList.remove('slds-show');
+            document.getElementById('tab2-content').classList.remove('slds-show');
+            break;
+        default:
+    }
 }

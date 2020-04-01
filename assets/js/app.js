@@ -32,6 +32,8 @@ function tabUpdate(id){
             document.getElementById('tab2content').classList.remove('slds-hide');
             // Add Classes - Content
             document.getElementById('tab2content').classList.add('slds-show');
+            document.getElementById('tab1content').classList.add('slds-hide');
+            document.getElementById('tab3content').classList.add('slds-hide');
 
             break;
         case 'tab3':

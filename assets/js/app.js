@@ -20,7 +20,7 @@ function tabUpdate(id){
             document.getElementById('tab3content').classList.add('slds-hide');
             break;
         case 'tab2':
-            console.log('Switch Result: Tab2');
+            console.log('Switch Result: Tab2..');
             // Remove Classes - Tabs
             document.getElementById('tab1').classList.remove('slds-is-active');
             document.getElementById('tab3').classList.remove('slds-is-active');

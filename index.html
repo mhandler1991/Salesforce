@@ -89,7 +89,7 @@
     <!-- End Global Navigation -->
 
     <!-- Grid -->
-    <div class="slds-grid slds-gutters">
+    <div class="slds-grid slds-gutters slds-wrap">
         <div class="slds-col slds-size_1-of-1">
 
             <!-- Start Card -->
@@ -175,86 +175,26 @@
     </div>
 
     <!-- Grid -->
-    <div class="slds-grid slds-gutters">
+    <div class="slds-grid slds-gutters slds-wrap">
         <div class="slds-col slds-size_2-of-3">
-            <!-- Start Card -->
             <article class="slds-card">
-                <div class="slds-page-header">
-                    <div class="slds-page-header__row">
-                        <div class="slds-page-header__col-title">
-                            <div class="slds-media">
-                                <div class="slds-media__figure">
-                                    <span class="slds-icon_container slds-icon-standard-contact"
-                                        title="Maxwell Handler">
-                                        <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
-                                            <use
-                                                xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact_list">
-                                            </use>
-                                        </svg>
-                                        <span class="slds-assistive-text">Contact Information</span>
-                                    </span>
-                                </div>
-                                <div class="slds-media__body">
-                                    <h2>Contact Information</h2>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Buttons -->
-                        <!-- <div class="slds-page-header__col-actions">
-                            <div class="slds-page-header__controls">
-                                <div class="slds-page-header__control">
-                                    <div class="slds-clearfix">
-                                        <div class="slds-float_right">
-                                            <div slot="actions">
-                                                <lightning-button-icon icon-name="utility:add" variant="bare"
-                                                    alternative-text="New Contact" size="Large" onclick={convert}>
-                                                </lightning-button-icon>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                    </div>
-                </div>
-                <!-- BODY -->
-                <div class="slds-card__body slds-card__body_inner">
-                    <div class="slds-grid slds-gutters">
-                        <div class="slds-col slds-size_1-of-5">
-                            <div class="slds-m-around_medium">
-                                <div class="slds-tile__detail">
-                                    <dl class="slds-dl_inline">
-                                        <dt class="slds-dl_inline__label">Email:</dt>
-                                        <dd class="slds-dl_inline__detail">
-                                            mhandler1991@gmail.com
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slds-col slds-size_1-of-5">
-                            <div class="slds-m-around_medium">
-                                <div class="slds-tile__detail">
-                                    <dl class="slds-dl_inline">
-                                        <dt class="slds-dl_inline__label">Phone:</dt>
-                                        <dd class="slds-dl_inline__detail">
-                                            (650)759-2961
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <footer class="slds-card__footer">
-                    <p>footer</p>
-                </footer> -->
-
+                <div class="slds-tabs_default">
+                    <ul class="slds-tabs_default__nav" role="tablist">
+                      <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation">
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a>
+                      </li>
+                      <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a>
+                      </li>
+                      <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a>
+                      </li>
+                    </ul>
+                    <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
+                    <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">Item Two Content</div>
+                    <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">Item Three Content</div>
+                  </div>
             </article>
-            <!-- End of Card -->
         </div>
 
         <div class="slds-col slds-size_1-of-3">

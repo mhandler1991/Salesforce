@@ -25,6 +25,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!-- Import JS -->
+    <script src="assets/js/app.js"></script>
+
 </head>
 
 <body>
@@ -183,13 +186,13 @@
                 <div class="slds-tabs_default">
                     <ul class="slds-tabs_default__nav" role="tablist">
                       <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation">
-                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Item One</a>
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab1" onclick="tabUpdate">Item One</a>
                       </li>
                       <li class="slds-tabs_default__item" title="Item Two" role="presentation">
-                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">Item Two</a>
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab2" onclick="tabUpdate">Item Two</a>
                       </li>
                       <li class="slds-tabs_default__item" title="Item Three" role="presentation">
-                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">Item Three</a>
+                        <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab3" onclick="tabUpdate">Item Three</a>
                       </li>
                     </ul>
                     <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">Item One Content</div>
@@ -198,7 +201,7 @@
                   </div>
             </article>
             <!-- End of Tab Section -->
-            
+
         </div>
 
         <div class="slds-col slds-size_1-of-3">

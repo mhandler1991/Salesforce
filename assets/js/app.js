@@ -12,8 +12,7 @@ function tabUpdate(id){
     removeClass = [];
     addClass = "";
     removeContentShow = [];
-    removeContentHide = "";
-    addContentShow = "";
+    addRemoveContent = "";
     addContentHide = [];
 
     function tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide){

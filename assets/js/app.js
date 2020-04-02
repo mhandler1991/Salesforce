@@ -38,6 +38,8 @@ function tabUpdate(id){
         for (i = 0; i < addContentHide.length; i++) {
             document.getElementById(addContentHide[i]).classList.add('slds-hide');
         };
+        document.querySelectorAll()
+
         //Do some Logging...
         console.log('Boy, I am I glad we handeled that Tab...');
 
@@ -47,11 +49,11 @@ function tabUpdate(id){
         case 'tab1':
 
             // Define Variables
-            removeClass = ['tab2', 'tab3'];
+            removeClass = ['tab2', 'tab3', 'tab4', 'tab5'];
             addClass = 'tab1';
-            removeContentShow = ['tab2content', 'tab3content'];
+            removeContentShow = ['tab2content', 'tab3content', 'tab4content', 'tab5content'];
             addRemoveContent = 'tab1content';
-            addContentHide = ['tab2content', 'tab3content'];
+            addContentHide = ['tab2content', 'tab3content', 'tab4content', 'tab5content'];
             // Call Tab Handeler
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
@@ -59,11 +61,11 @@ function tabUpdate(id){
         case 'tab2':
 
             // Define Variables
-            removeClass = ['tab1','tab3'];
+            removeClass = ['tab1','tab3', 'tab4', 'tab5'];
             addClass = 'tab2';
-            removeContentShow = ['tab1content','tab3content'];
+            removeContentShow = ['tab1content','tab3content', 'tab4content', 'tab5content'];
             addRemoveContent = 'tab2content';
-            addContentHide = ['tab1content', 'tab3content'];
+            addContentHide = ['tab1content', 'tab3content', 'tab4content', 'tab5content'];
             // Call Tab Handeler
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
@@ -71,13 +73,39 @@ function tabUpdate(id){
         case 'tab3':
 
             // Define Variables
-            removeClass = ['tab1','tab2'];
+            removeClass = ['tab1','tab2', 'tab4', 'tab5'];
             addClass = 'tab3';
-            removeContentShow = ['tab1content','tab2content'];
+            removeContentShow = ['tab1content','tab2content', 'tab4content', 'tab5content'];
             addRemoveContent = 'tab3content';
-            addContentHide = ['tab1content', 'tab2content'];
+            addContentHide = ['tab1content', 'tab2content', 'tab4content', 'tab5content'];
             // Call Tab Handeler
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
+
+            break;
+        
+        case 'tab4':
+
+            // Define Variables
+            removeClass = ['tab1','tab2', 'tab3', 'tab5'];
+            addClass = 'tab4';
+            removeContentShow = ['tab1content','tab2content', 'tab3content', 'tab5content'];
+            addRemoveContent = 'tab4content';
+            addContentHide = ['tab1content', 'tab2content', 'tab3content', 'tab5content'];
+            // Call Tab Handeler
+            tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
+
+            break;
+
+        case 'tab5':
+
+            // Define Variables
+            removeClass = ['tab1','tab2', 'tab3', 'tab4'];
+            addClass = 'tab5';
+            removeContentShow = ['tab1content','tab2content', 'tab3content', 'tab4content'];
+            addRemoveContent = 'tab5content';
+            addContentHide = ['tab1content', 'tab2content', 'tab3content', 'tab4content'];
+            // Call Tab Handeler
+            tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);        
 
             break;
 

@@ -82,7 +82,6 @@ function tabUpdate(id){
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
             break;
-        
         case 'tab4':
 
             // Define Variables
@@ -95,7 +94,6 @@ function tabUpdate(id){
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
             break;
-
         case 'tab5':
 
             // Define Variables
@@ -108,7 +106,6 @@ function tabUpdate(id){
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);        
 
             break;
-
         default:
             
             // Log Unknown Tab Action

@@ -38,7 +38,6 @@ function tabUpdate(id){
         for (i = 0; i < addContentHide.length; i++) {
             document.getElementById(addContentHide[i]).classList.add('slds-hide');
         };
-        document.querySelectorAll()
 
         //Do some Logging...
         console.log('Boy, I am I glad we handeled that Tab...');

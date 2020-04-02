@@ -10,10 +10,10 @@ function tabUpdate(id){
     console.log(id);
 
     removeClass = [];
-    addClass;
+    addClass = "";
     removeContentShow = [];
-    removeContentHide;
-    addContentShow;
+    removeContentHide = "";
+    addContentShow = "";
     addContentHide = [];
 
     function tabHandeler(removeClass, addClass, removeContentShow, removeContentHide, addContentShow, addContentHide){

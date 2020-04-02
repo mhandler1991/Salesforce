@@ -17,6 +17,8 @@ function tabUpdate(id){
 
     function tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide){
 
+        console.log('Tab Handeler Called...');
+
         var i;
         // Remove SLDS Active
         for (i = 0; i < removeClass.length; i++) {
@@ -36,63 +38,46 @@ function tabUpdate(id){
         for (i = 0; i < addContentHide.length; i++) {
             document.getElementById(addContentHide[i]).classList.add('slds-hide');
         };
+        //Do some Logging...
+        console.log('Boy, I am I glad we handeled that Tab...');
 
     }
 
     switch(id) {
         case 'tab1':
 
+            // Define Variables
             removeClass = ['tab2', 'tab3'];
             addClass = 'tab1';
             removeContentShow = ['tab2content', 'tab3content'];
             addRemoveContent = 'tab1content';
             addContentHide = ['tab2content', 'tab3content'];
-
+            // Call Tab Handeler
             tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
             break;
         case 'tab2':
 
-            console.log('Switch Result: Tab2');
-
-            // Tab Handeling...
-            // Remove Classes - Tabs
-            document.getElementById('tab1').classList.remove('slds-is-active');
-            document.getElementById('tab3').classList.remove('slds-is-active');
-            // Add Classes - Tabs
-            document.getElementById('tab2').classList.add('slds-is-active');
-            // Remove Classes - Content
-            document.getElementById('tab1content').classList.remove('slds-show');
-            document.getElementById('tab3content').classList.remove('slds-show');
-            document.getElementById('tab2content').classList.remove('slds-hide');
-            // Add Classes - Content
-            document.getElementById('tab2content').classList.add('slds-show');
-            document.getElementById('tab1content').classList.add('slds-hide');
-            document.getElementById('tab3content').classList.add('slds-hide');
-            // End Tab Handeling...
-            console.log('Boy, we handeled those tabs...');
+            // Define Variables
+            removeClass = ['tab1','tab3'];
+            addClass = 'tab2';
+            removeContentShow = ['tab1content','tab3content'];
+            addRemoveContent = 'tab2content';
+            addContentHide = ['tab1content', 'tab3content'];
+            // Call Tab Handeler
+            tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
             break;
         case 'tab3':
 
-            console.log('Switch Result: Tab3');
-
-            // Tab Handeling...
-            // Remove Classes - Tabs
-            document.getElementById('tab1').classList.remove('slds-is-active');
-            document.getElementById('tab2').classList.remove('slds-is-active');
-            // Add Classes - Tabs
-            document.getElementById('tab3').classList.add('slds-is-active');
-            // Remove Classes - Content
-            document.getElementById('tab1content').classList.remove('slds-show');
-            document.getElementById('tab2content').classList.remove('slds-show');
-            document.getElementById('tab3content').classList.remove('slds-hide');
-            // Add Classes - Content
-            document.getElementById('tab3content').classList.add('slds-show');
-            document.getElementById('tab1content').classList.add('slds-hide');
-            document.getElementById('tab2content').classList.add('slds-hide');
-            // End Tab Handeling...
-            console.log('Boy, we handeled those tabs...');
+            // Define Variables
+            removeClass = ['tab1','tab2'];
+            addClass = 'tab3';
+            removeContentShow = ['tab1content','tab2content'];
+            addRemoveContent = 'tab3content';
+            addContentHide = ['tab1content', 'tab2content'];
+            // Call Tab Handeler
+            tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
             break;
 
@@ -103,21 +88,3 @@ function tabUpdate(id){
             break;
     }
 }
-
-
-// console.log('Switch Result: Tab1');
-
-// document.getElementById('tab2').classList.remove('slds-is-active');
-// document.getElementById('tab3').classList.remove('slds-is-active');
-
-// document.getElementById('tab1').classList.add('slds-is-active');
-
-// document.getElementById('tab2content').classList.remove('slds-show');
-// document.getElementById('tab3content').classList.remove('slds-show');
-// document.getElementById('tab1content').classList.remove('slds-hide');
-
-// document.getElementById('tab1content').classList.add('slds-show');
-// document.getElementById('tab2content').classList.add('slds-hide');
-// document.getElementById('tab3content').classList.add('slds-hide');
-
-// console.log('Boy, we handeled those tabs...');

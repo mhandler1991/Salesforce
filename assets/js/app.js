@@ -16,26 +16,26 @@ function tabUpdate(id){
     addContentShow = "";
     addContentHide = [];
 
-    function tabHandeler(removeClass, addClass, removeContentShow, removeContentHide, addContentShow, addContentHide){
+    function tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide){
 
         var i;
-
+        // Remove SLDS Active
         for (i = 0; i < removeClass.length; i++) {
             document.getElementById(removeClass[i]).classList.remove('slds-is-active');
         };
-
+        // Add SLDS Active
         document.getElementById(addClass).classList.add('slds-is-active');
-
+        // Remove SLDS Show
         for (i = 0; i < removeContentShow.length; i++) {
             document.getElementById(removeContentShow[i]).classList.remove('slds-show');
         };
-
-        document.getElementById(removeContentHide).classList.remove('slds-show');
-
-        document.getElementById(addContentShow).classList.add('slds-show');
-
+        // Remove SLDS Hide
+        document.getElementById(addRemoveContent).classList.remove('slds-hide');
+        // Add SLDS Show
+        document.getElementById(addRemoveContent).classList.add('slds-show');
+        // Add SLDS Hide
         for (i = 0; i < addContentHide.length; i++) {
-            document.getElementById(addContentHide[i]).classList.remove('slds-hide');
+            document.getElementById(addContentHide[i]).classList.add('slds-hide');
         };
 
     }
@@ -46,11 +46,10 @@ function tabUpdate(id){
             removeClass = ['tab2', 'tab3'];
             addClass = 'tab1';
             removeContentShow = ['tab2content', 'tab3content'];
-            removeContentHide = 'tab1content';
-            addContentShow = 'tab1content';
+            addRemoveContent = 'tab1content';
             addContentHide = ['tab2content', 'tab3content'];
 
-            tabHandeler(removeClass, addClass, removeContentShow, removeContentHide, addContentShow, addContentHide);
+            tabHandeler(removeClass, addClass, removeContentShow, addRemoveContent, addContentHide);
 
             break;
         case 'tab2':

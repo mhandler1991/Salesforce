@@ -1,2 +1,1 @@
-//Chart JS
- 
+//SKILLS JS

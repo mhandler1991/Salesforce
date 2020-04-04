@@ -32,7 +32,8 @@
     <script src="assets/js/app.js"></script>
 
     <!-- Chart JS https://www.chartjs.org/ -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -222,7 +223,11 @@
                                 <!-- SKILLS -->
                                 <div id="tab5content" class="slds-tabs_default__content slds-hide" role="tabpanel"
                                     aria-labelledby="tab-default-5__item">
-                                    <p w3-include-html="assets/html/skills.html"></p>
+                                    <!-- <p w3-include-html="assets/html/skills.html"></p> -->
+                                    <div>
+                                        <!-- Chart JS -->
+                                        <canvas id="skillsChart"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </article>

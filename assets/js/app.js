@@ -112,6 +112,68 @@ function tabUpdate(id){
             break;
     }
 
-    // Handle Multiple HTML Pages
+
+    // *******************************
+    // W3 HTML INCLUDE
+    // *******************************
     w3.includeHTML();
+
+
+    // *******************************
+    // CHART JS - SKILLS CHART
+    // *******************************
+    let skillsChart = document.getElementById('skillsChart').getContext('2d');
+
+    let chart = new Chart(skillsChart, {
+        type: 'horizontalBar', // Chart Type...
+        data: {
+            labels: [
+                'HTML',
+                'CSS',
+                'Javascript',
+                'Node.js',
+                'SQL',
+                'Mongo DB',
+                'React',
+                'Visualforce',
+                'Lightning Components',
+            ],
+            datasets: [{
+                label: 'Title',
+                data: [99, 90, 75, 50, 75, 50, 25, 50, 60, ],
+                backgroundColor: '#0C8EFF',
+                borderWidth: 1,
+                hoverBackgroundColor: '#00396B',
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Dev Skills',
+                fontSize: 25
+            },
+            legend: {
+                display: false
+            },
+            layout: {
+                padding: 50,
+            },
+            tooltips: {
+                enabled: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        drawOnChartArea: false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        drawOnChartArea: false
+                    }
+                }]
+            }
+        },
+    })
+
 }

@@ -111,4 +111,7 @@ function tabUpdate(id){
             console.log('Oh No!.. Something went wrong with all this Tabbing - Opps');
             break;
     }
+
+    // Handle Multiple HTML Pages
+    w3.includeHTML();
 }

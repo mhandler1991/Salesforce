@@ -156,13 +156,16 @@ function tabUpdate(id){
                 display: false
             },
             layout: {
-                padding: 50,
+                padding:{
+                    right:50
+                }
             },
             tooltips: {
                 enabled: false
             },
             scales: {
                 xAxes: [{
+                    display: false,
                     gridLines: {
                         drawOnChartArea: false
                     }

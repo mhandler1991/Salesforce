@@ -38,8 +38,6 @@
 
 <body>
 
-    <p>Skills</p>
-
     <!-- Chart JS -->
     <canvas id="skillsChart"></canvas>
 
@@ -58,16 +56,15 @@
                 'Mongo DB',
                 'React',
                 'Visualforce',
-                'Lightning Components'
+                'Lightning Components',
                 ],
                 datasets:[{
                     label: 'Title',
-                    data:[ 99,90,75,50,75,50,25,50,60
+                    data:[ 99,90,75,50,75,50,25,50,60,
                     ],
                     backgroundColor: '#0C8EFF',
                     borderWidth: 1,
-                    hoverBackgroundColor: '#00396B'
-
+                    hoverBackgroundColor: '#00396B',
                 }]
             },
             options:{
@@ -84,6 +81,18 @@
                 },
                 tooltips:{
                     enabled:false
+                },
+                scales:{
+                    xAxes:[{
+                        gridLines:{
+                            drawOnChartArea:false
+                        }
+                    }],
+                    yAxes:[{
+                        gridLines:{
+                            drawOnChartArea:false
+                        }
+                    }]
                 }
             },
         })

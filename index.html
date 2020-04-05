@@ -15,10 +15,6 @@
     <!--  https://cdnjs.com/libraries/meyer-reset  -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
 
-    <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
     <!-- Salesforce SLDS -->
     <link rel="stylesheet" href="assets/styles/salesforce-lightning-design-system.css" />
 
@@ -28,19 +24,20 @@
     <!-- Handle multiple HTML Pages -->
     <script src="https://www.w3schools.com/lib/w3.js"></script>
 
-    <!-- Import JS -->
-    <script src="assets/js/app.js"></script>
-
     <!-- Chart JS https://www.chartjs.org/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
         integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 
+    <!-- Import JS -->
+    <script src="/assets/js/app.js"></script>
+
 </head>
 
-<body>
+<body onload="log()">
 
     <div class="slds-grid">
         <div class="slds-col">
+
 
             <!-- Global Navigation -->
             <div class="slds-context-bar">
@@ -82,83 +79,126 @@
                     <div class="slds-p-around_medium">
 
                         <!-- Start Card - Contact Information -->
-                        <article class="slds-card">
-                            <div class="slds-page-header">
-                                <div class="slds-page-header__row">
-                                    <div class="slds-page-header__col-title">
-                                        <div class="slds-media">
-                                            <div class="slds-media__figure">
-                                                <span class="slds-icon_container slds-icon-standard-contact"
-                                                    title="Maxwell Handler">
-                                                    <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+
+                        <div class="slds-page-header slds-page-header_record-home">
+                            <div class="slds-page-header__row">
+                                <div class="slds-page-header__col-title">
+                                    <div class="slds-media">
+                                        <div class="slds-media__figure">
+                                            <span class="slds-icon_container slds-icon-standard-contact">
+                                                <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                                    <use
+                                                        xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity">
+                                                    </use>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <div class="slds-page-header__name">
+                                                <div class="slds-page-header__name-title">
+                                                    <h1>
+                                                        <span>Contact</span>
+                                                        <span class="slds-page-header__title slds-truncate"
+                                                            title="Acme - 1,200 Widgets">Maxwell Handler</span>
+                                                    </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-page-header__col-actions">
+                                    <div class="slds-page-header__controls">
+                                        <div class="slds-page-header__control">
+                                            <!-- Follow Button -->
+                                            <button
+                                                class="slds-button slds-button_neutral slds-button_stateful slds-not-selected"
+                                                aria-live="assertive">
+                                                <span class="slds-text-not-selected">
+                                                    <svg class="slds-button__icon slds-button__icon_small slds-button__icon_left"
+                                                        aria-hidden="true">
                                                         <use
-                                                            xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact_list">
+                                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add">
                                                         </use>
-                                                    </svg>
-                                                    <span class="slds-assistive-text">Contact Information</span>
-                                                </span>
-                                            </div>
-                                            <div class="slds-media__body">
-                                                <h2>Contact Information</h2>
-                                            </div>
+                                                    </svg>Follow</span>
+                                                <span class="slds-text-selected">
+                                                    <svg class="slds-button__icon slds-button__icon_small slds-button__icon_left"
+                                                        aria-hidden="true">
+                                                        <use
+                                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#check">
+                                                        </use>
+                                                    </svg>Following</span>
+                                                <span class="slds-text-selected-focus">
+                                                    <svg class="slds-button__icon slds-button__icon_small slds-button__icon_left"
+                                                        aria-hidden="true">
+                                                        <use
+                                                            xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close">
+                                                        </use>
+                                                    </svg>Unfollow</span>
+                                            </button>
                                         </div>
-                                    </div>
-
-                                    <!-- Buttons -->
-                                    <!-- <div class="slds-page-header__col-actions">
-                            <div class="slds-page-header__controls">
-                                <div class="slds-page-header__control">
-                                    <div class="slds-clearfix">
-                                        <div class="slds-float_right">
-                                            <div slot="actions">
-                                                <lightning-button-icon icon-name="utility:add" variant="bare"
-                                                    alternative-text="New Contact" size="Large" onclick={convert}>
-                                                </lightning-button-icon>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
-                                </div>
-                            </div>
-                            <!-- BODY -->
-                            <div class="slds-card__body slds-card__body_inner">
-                                <div class="slds-grid slds-gutters">
-                                    <div class="slds-col slds-size_1-of-5">
-                                        <div class="slds-m-around_medium">
-                                            <div class="slds-tile__detail">
-                                                <dl class="slds-dl_inline">
-                                                    <dt class="slds-dl_inline__label">Email:</dt>
-                                                    <dd class="slds-dl_inline__detail">
-                                                        mhandler1991@gmail.com
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="slds-col slds-size_1-of-5">
-                                        <div class="slds-m-around_medium">
-                                            <div class="slds-tile__detail">
-                                                <dl class="slds-dl_inline">
-                                                    <dt class="slds-dl_inline__label">Phone:</dt>
-                                                    <dd class="slds-dl_inline__detail">
-                                                        (650)759-2961
-                                                    </dd>
-                                                </dl>
-                                            </div>
+                                        <div class="slds-page-header__control">
+                                            <!-- Button Group -->
+                                            <ul class="slds-button-group-list">
+                                                <li>
+                                                    <button class="slds-button slds-button_neutral">LinkedIn</button>
+                                                </li>
+                                                <li>
+                                                    <button class="slds-button slds-button_neutral">Trailhead</button>
+                                                </li>
+                                                <li>
+                                                    <button class="slds-button slds-button_neutral">Github</button>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="slds-page-header__row slds-page-header__row_gutters">
+                                <div class="slds-page-header__col-details">
+                                    <!-- Display Fields -->
+                                    <ul class="slds-page-header__detail-row">
+                                        <!-- Field 1 -->
+                                        <li class="slds-page-header__detail-block">
+                                            <div class="slds-text-title slds-truncate" title="Field 1">First Name</div>
+                                                <div class="slds-truncate"title="First Name">
+                                                    Maxwell
+                                                </div>
+                                        </li>
+                                        <!-- Field 2 -->
+                                        <li class="slds-page-header__detail-block">
+                                            <div class="slds-text-title slds-truncate" title="Field 1">Last Name</div>
+                                                <div class="slds-truncate"title="First Name">
+                                                    Handler
+                                                </div>
+                                        </li>
+                                        <!-- Field 3 -->
+                                        <li class="slds-page-header__detail-block">
+                                            <div class="slds-text-title slds-truncate" title="Field 1">Email</div>
+                                                <div class="slds-truncate"title="First Name">
+                                                    mhandler1991@gmail.com
+                                                </div>
+                                        </li>
+                                        <!-- Field 4 -->
+                                        <li class="slds-page-header__detail-block">
+                                            <div class="slds-text-title slds-truncate" title="Field 1">Phone</div>
+                                                <div class="slds-truncate"title="First Name">
+                                                    (650) 759 - 2961
+                                                </div>
+                                        </li>
+                                        <!-- Field 5 -->
+                                        <li class="slds-page-header__detail-block">
+                                            <div class="slds-text-title slds-truncate" title="Field 1">Website</div>
+                                                <div class="slds-truncate"title="First Name">
+                                                    maxwellhandler.com
+                                                </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                            <!-- <footer class="slds-card__footer">
-                    <p>footer</p>
-                </footer> -->
-
-                        </article>
                         <!-- End of Card -->
+
                     </div>
                 </div>
             </div>
@@ -238,8 +278,36 @@
                 <!-- Side Bar -->
                 <div class="slds-col slds-size_1-of-3">
                     <div class="slds-p-around_medium">
+
+                        <!-- MAP -->
                         <article class="slds-card">
+                            <div class="mapouter">
+                                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas"
+                                        src="https://maps.google.com/maps?q=San%20Diego&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                </div>
+                                <style>
+                                    .mapouter {
+                                        position: relative;
+                                        text-align: right;
+                                        height: relative;
+                                        width: relative;
+                                    }
+
+                                    .gmap_canvas {
+                                        overflow: hidden;
+                                        background: none !important;
+                                        height: relative;
+                                        width: relative;
+                                    }
+                                </style>
+                            </div>
                         </article>
+                    </div>
+
+                    <div class="slds-p-around_medium">
+                        <article class="slds-card">
+
                     </div>
                 </div>
             </div>
@@ -247,8 +315,22 @@
         </div>
     </div>
 
+
+
+    <!-- ************************** -->
+    <!-- ************************** -->
+
+    <!-- Handle Multiple HTML Pages -->
+    <script>
+        w3.includeHTML();
+    </script>
+
     <!-- LIVE CHAT -->
+    <!-- IGNORE -->
     <script src="https://embed.small.chat/TMEKTUSEBG011D9WB9T7.js" async></script>
+
+    <!-- ************************** -->
+    <!-- ************************** -->
 
 </body>
 

@@ -1,4 +1,4 @@
-
+w3.includeHTML();
 
 function log() {
     console.log('%c ', 'font-size:1000px; background:url(https://media.makeameme.org/created/who-the-hell-31edeu.jpg) no-repeat;');
